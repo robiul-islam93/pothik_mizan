@@ -36,38 +36,54 @@
 
 /* hero-section-start */
 
-.hero-section {
-  background-image: url(../img/Rectangle\ 4.png);
-  max-width: 100%;
+.hero-img img{
+  /* background-image: url(assets/hero-section_img/hero-img1.jpg); */
+  width: 100%;
   height: 100vh;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
+
+.navbar {
+font-size: 20px;
+font-weight: 700;
+height: 18vh;
+background-image: url(../img/shape.png);
+background-position: bottom;
+background-repeat: no-repeat;
+background-size: cover;
+/* background: rgba(255, 255, 255, 0); Initial transparent background */
+transition: background 0.3s ease; /* Transition effect on background change */
+}
+
+.navbar-scrolled {
+background: rgb(34, 34, 34,0.7) !important;/* Scrolled/fixed position background color */
+color: #ffffff !important;
+
+}
+
+.navbar-scrolled .navbar-nav a{
+  color: #ffffff !important;
+}
+
 
 .navbar-brand img {
   width: 100px;
 }
+ 
+.navbar-nav a{
+  color: #000000;
 
-.navbar {
-  font-size: 20px;
-  font-weight: 700;
-  height: 18vh;
-  background-image: url(../img/navbar-bs-shape.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .navbar-nav li {
   padding: 10px 25px;
-  color: #00000055;
 }
 
 .nav-item a {
   position: relative;
-  font-size: 18px;
+  font-size: 20px;
   padding: 5px 0;
   display: inline-block;
   text-transform: uppercase;
@@ -849,6 +865,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  top: 90%;
 }
 
 .back-top-icon {

@@ -16,6 +16,17 @@
     .car-items {
         margin-top: 10%;
     }
+   
+    .nav-item a {
+        text-transform: capitalize;
+        color: #222 !important;
+        transition: 0.5s;
+        }
+
+        .nav-item a:hover{
+            background: #222 !important;
+            color: #fff !important;
+        }
 
     .nav .nav-link {
         /* color: var(--black-color); */
@@ -38,11 +49,11 @@
 <section class="tab-section">
 
     <!-- content-tab start -->
-    <h1 class="bg-primary p-3 text-center text-white mb-4">Travel Vlog Picture </h1>
+    <h1 class="bg-primary p-3 text-center text-white mb-4">Travel Blog Picture </h1>
     <div class="container"> <!-- Nav pills -->
         <ul class="nav nav-pills justify-content-center col-md-12" role="tablist">
             <li class="nav-item">
-                <a class="nav-link  active" data-bs-toggle="pill" href="#Travel">Traveling Vloge Picture</a>
+                <a class="nav-link active" data-bs-toggle="pill" href="#Travel">Traveling Vloge Picture</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="pill" href="#Medical">Medical Picture</a>

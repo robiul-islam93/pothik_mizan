@@ -6,7 +6,7 @@
             <div class="footer-content">
               <div class="bg-vlog-img">
                 <a class="pothik-logo text-center" href="#"
-                  ><img src="./icon/vlog-icon-removebg-preview.png" alt=""
+                  ><img src="assets/icon/vlog-icon-removebg-preview.png" alt=""
                 /></a>
               </div>
               <div class="footer-menu">

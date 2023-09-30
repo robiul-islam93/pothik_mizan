@@ -63,12 +63,12 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="card">
                                         <h5 class="card-title p-2">Himaloy Vloge Video</h5>
-                                        <!-- <video width="100%" controls>
+                                        <video width="100%" controls>
                                             <source
                                                 src="./assets/vlog-video/Pakistan vs India _ Shaheen afridi _ Tiktok short video.mp4"
                                                 type="video/mp4">
 
-                                        </video> -->
+                                        </video>
                                         <div class="card-body">
                                             <p class="card-text">Description of the video goes here.</p>
                                             <a href="https://www.youtube.com/@pothikmizan" class="btn btn-primary">Watch
