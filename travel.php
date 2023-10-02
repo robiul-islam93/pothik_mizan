@@ -1,12 +1,8 @@
-<?php
-
-include './includes/header.php';
-?>
 
 <section class="travel-story-section">
   <!-- Travel Story Header -->
   <div class="travel-story-hedar-section text-center">
-    <h1 id="TRAVEL">Travel Story.</h1>
+    <h1 id="TRAVEL">Travel Video.</h1>
     <p>Explore the World!</p>
   </div>
 
@@ -16,7 +12,7 @@ include './includes/header.php';
       <!-- Video -->
       <div class="col-lg-6 travel-video">
         <video width="100%" controls>
-          <source src="./img/FASLON KO TAKALUF HAI HUM SE AGAR 🤍--Slowed Reverb Naat--Whatsapp status--Jumma Mubarak--#shorts.mp4" type="video/mp4">
+          <source src="./assets/travel-video/shiddat-mugic_video.mkv">
         </video>
       </div>
 
@@ -30,7 +26,7 @@ include './includes/header.php';
 
           <!-- Read More Button -->
           <div class="traveling-btn">
-            <a href="#">Read More</a>
+            <a href="vloge-video.php">Read More</a>
           </div>
         </div>
       </div>

@@ -17,13 +17,13 @@
         margin-top: 10%;
     }
    
-    .nav-item a {
+    .nav-itemsD a {
         text-transform: capitalize;
         color: #222 !important;
         transition: 0.5s;
         }
 
-        .nav-item a:hover{
+        .nav-itemsD a:hover{
             background: #222 !important;
             color: #fff !important;
         }
@@ -49,19 +49,19 @@
 <section class="tab-section">
 
     <!-- content-tab start -->
-    <h1 class="bg-primary p-3 text-center text-white mb-4">Travel Blog Picture </h1>
+    <h1 class="bg-primary p-3 text-center text-white mb-4">TRAVEL BLOG PICTURE </h1>
     <div class="container"> <!-- Nav pills -->
         <ul class="nav nav-pills justify-content-center col-md-12" role="tablist">
-            <li class="nav-item">
+            <li class="nav-item  nav-itemsD">
                 <a class="nav-link active" data-bs-toggle="pill" href="#Travel">Traveling Vloge Picture</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item  nav-itemsD">
                 <a class="nav-link" data-bs-toggle="pill" href="#Medical">Medical Picture</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item  nav-itemsD">
                 <a class="nav-link" data-bs-toggle="pill" href="#Animation">Animation Picture</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item  nav-itemsD">
                 <a class="nav-link" data-bs-toggle="pill" href="#Islamic">Islamic Picture</a>
             </li>
         </ul>

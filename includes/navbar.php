@@ -129,7 +129,7 @@ $(document).ready(function () {
   // Auto-slide every 3 seconds (adjust as needed)
   setInterval(function () {
     $('#carouselExampleFade').carousel('next');
-  }, 7); 
+  }, 3); 
 });
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

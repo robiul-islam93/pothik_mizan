@@ -50,7 +50,6 @@
 
     <title>Pothik mizan</title>
   </head>
-
-  <body>
+  <body style="background: #007bff28;">
 
   <?php include('navbar.php');?>
