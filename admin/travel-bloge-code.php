@@ -8,37 +8,34 @@ if (isset($_POST['bloge_video_add_video'])) {
     $name = validate($_POST['name']);
     $slug = str_replace('','-',strtolower(($name)));
     $small_description = validate($_POST['small_description']);
-    $long_description = validate($_POST['long_description']);
 
     // validate img file setup start
 
     if ($_FILES['video']['size'] > 0) {
 
-        $image = $_FILES['video']['name'];
+        $video = $_FILES['video']['name'];
 
-        $imgfiletype = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+        $videofiletype = strtolower(pathinfo($video, PATHINFO_EXTENSION));
 
-        if ($imgfiletype != 'jpg' && $imgfiletype != 'jpeg' && $imgfiletype != 'mp4' && $imgfiletype != 'png') {
+        if ($videofiletype != 'jpg' && $videofiletype != 'jpeg' && $videofiletype != 'mp4' && $videofiletype != 'png') {
             redirect('vlog-img.php', 'Sorry Only JPG, mp4 JPEG,  And PNG Imge Uplode');
         }
 
         $path = "../assets/Upload/travel-vloge_video/";
 
-        $imgExt = pathinfo($image, PATHINFO_EXTENSION);
-        $filename = time() . '.' . $imgExt;
+        $videoExt = pathinfo($video, PATHINFO_EXTENSION);
+        $filename = time() . '.' . $videoExt;
 
-        $fileimage = 'assets/Upload/travel-vloge_video/' . $filename;
+        $filevideo = 'assets/Upload/travel-vloge_video/' . $filename;
     } else {
-        $fileimage = NULL;
+        $filevideo = NULL;
     }
 
-    // validate img file setup end
 
     $status = validate($_POST['status']) == true ? '1' : '0';
 
-
-    $query = "INSERT INTO travel_vloge_video (name, slug, small_description, video, status) 
-              VALUES ('$name','$slug' '$small_description', '$fileimage', $status)";
+    $query = "INSERT INTO travel_vloge_video (name,slug,small_description,video,status)
+              VALUE('$name','$slug','$small_description','$filevideo','$status')";
 
     $result = mysqli_query($connection, $query);
 
@@ -58,3 +55,4 @@ if (isset($_POST['bloge_video_add_video'])) {
 
 
 ?>
+
