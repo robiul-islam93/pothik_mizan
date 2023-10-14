@@ -16,17 +16,18 @@
     .car-items {
         margin-top: 10%;
     }
-   
+
     .nav-itemsD a {
         text-transform: capitalize;
+        background: #fff !important;
         color: #222 !important;
         transition: 0.5s;
-        }
+    }
 
-        .nav-itemsD a:hover{
-            background: #222 !important;
-            color: #fff !important;
-        }
+    .nav-itemsD a:hover {
+        background: #222 !important;
+        color: #fff !important;
+    }
 
     .nav .nav-link {
         /* color: var(--black-color); */
@@ -73,8 +74,8 @@
         <!-- Travel Vloge section start  -->
         <div class="tab-content">
             <div id="Travel" class="container tab-pane active ">
-                <div class="car-items">
-                    <div class="car-item text-center">
+                <div class="vlog-picture-items">
+                    <div class="vloge-item text-center">
                         <div class="container">
                             <div class="row">
                                 <?php
@@ -87,41 +88,39 @@
                                     if (mysqli_num_rows($result) > 0) {
                                         foreach ($result as $row) {
 
-                                  ?>
-                                <div class="col-md-4">
-                                    <div class="card p-3 shadow-md">
+                                ?>
+                                            <div class="col-xl-4">
+                                                <div class="card p-3 m-2 shadow-md">
 
 
-                                        <?php if ($row['image'] != ''): ?>
+                                                    <?php if ($row['image'] != '') : ?>
 
 
-                                            <img src="<?= $row['image']; ?>" style="height: 30vh; object-fit: cover;"
-                                            class="w-100 rounded" alt="Img" >
+                                                        <img src="<?= $row['image']; ?>" style="height: 30vh; object-fit: cover;" class="w-100 rounded" alt="Img">
 
 
-                                        <?php else: ?>
-                                            <img src="assets/img/no-img.jpg" class="w-100 rounded" alt="Vlog Image"
-                                                >
+                                                    <?php else : ?>
+                                                        <img src="assets/img/no-img.jpg" class="w-100 rounded" alt="Vlog Image">
 
 
-                                        <?php endif; ?>
+                                                    <?php endif; ?>
 
 
 
-                                        <h3>
-                                            <?= $row['name']; ?>
-                                        </h3>
-                                        <p>
-                                            <?= $row['long_description']; ?>
-                                        </p>
-                                        <a href="#" class="btn btn-primary">See More</a>
-                                    </div>
-                                </div>
-                                            <?php
+                                                    <h3>
+                                                        <?= $row['name']; ?>
+                                                    </h3>
+                                                    <p>
+                                                        <?= $row['long_description']; ?>
+                                                    </p>
+                                                    <!-- <a href="#" class="btn btn-primary">See More</a> -->
+                                                </div>
+                                            </div>
+                                <?php
                                         }
                                     }
                                 }
-                                            ?>
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -134,35 +133,53 @@
         <!-- Medical Picture Section start -->
         <div class="tab-content">
             <div id="Medical" class="container tab-pane  ">
-                <div class="car-items">
-                    <div class="car-item text-center">
+                <div class="vlog-picture-items">
+                    <div class="vloge-item text-center">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card p-3 shadow-md">
-                                        <h1>Himchori</h1>
-                                        <img src="./assets/vlog-post-img/vlog-post-img1.png" alt="Vlog Image"
-                                            class="img-fluid mt-3" />
+                                <?php
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
-                                            elit fermentum
-                                            vestibulum. Nunc a dolor non orci auctor lacinia....</p>
-                                        <a href="#" class="btn btn-primary">See More</a>
-                                    </div>
-                                </div>
+                                $limit = 3;
 
-                                <div class="col-md-4">
-                                    <div class="card p-3 shadow-md">
-                                        <h1>Australia</h1>
-                                        <img src="./assets/vlog-post-img/vloge-post-img2.png" alt="Vlog Image"
-                                            class="img-fluid mt-3" />
+                                $imgquery = "SELECT * FROM medical_picture WHERE status = '0' ORDER BY id DESC ";
+                                $result = mysqli_query($connection, $imgquery);
+                                if ($result) {
+                                    if (mysqli_num_rows($result) > 0) {
+                                        foreach ($result as $row) {
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
-                                            elit fermentum
-                                            vestibulum. Nunc a dolor non orci auctor lacinia....</p>
-                                        <a href="#" class="btn btn-primary">See More</a>
-                                    </div>
-                                </div>
+                                ?>
+                                            <div class="col-xl-4">
+                                                <div class="card p-3 m-2 shadow-md">
+
+
+                                                    <?php if ($row['image'] != '') : ?>
+
+
+                                                        <img src="<?= $row['image']; ?>" style="height: 30vh; object-fit: cover;" class="w-100 rounded" alt="Img">
+
+
+                                                    <?php else : ?>
+                                                        <img src="assets/img/no-img.jpg" class="w-100 rounded" alt="Vlog Image">
+
+
+                                                    <?php endif; ?>
+
+
+
+                                                    <h3>
+                                                        <?= $row['name']; ?>
+                                                    </h3>
+                                                    <p>
+                                                        <?= $row['long_description']; ?>
+                                                    </p>
+                                                    <!-- <a href="#" class="btn btn-primary">See More</a> -->
+                                                </div>
+                                            </div>
+                                <?php
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -176,15 +193,14 @@
 
         <div class="tab-content">
             <div id="Animation" class="container tab-pane  ">
-                <div class="car-items">
-                    <div class="car-item text-center">
+                <div class="vlog-picture-items">
+                    <div class="vloge-item text-center">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-xl-4">
                                     <div class="card p-3 shadow-md">
                                         <h1>Himchori</h1>
-                                        <img src="./assets/vlog-post-img/vlog-post-img1.png" alt="Vlog Image"
-                                            class="img-fluid mt-3" />
+                                        <img src="./assets/vlog-post-img/vlog-post-img1.png" alt="Vlog Image" class="img-fluid mt-3" />
 
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
                                             elit fermentum
@@ -193,11 +209,10 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-xl-4">
                                     <div class="card p-3 shadow-md">
                                         <h1>Australia</h1>
-                                        <img src="./assets/vlog-post-img/vloge-post-img2.png" alt="Vlog Image"
-                                            class="img-fluid mt-3" />
+                                        <img src="./assets/vlog-post-img/vloge-post-img2.png" alt="Vlog Image" class="img-fluid mt-3" />
 
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
                                             elit fermentum
@@ -218,15 +233,14 @@
 
         <div class="tab-content">
             <div id="Islamic" class="container tab-pane  ">
-                <div class="car-items">
-                    <div class="car-item text-center">
+                <div class="vlog-picture-items">
+                    <div class="vloge-item text-center">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-xl-4">
                                     <div class="card p-3 shadow-md">
                                         <h1>Himchori</h1>
-                                        <img src="./assets/vlog-post-img/vlog-post-img1.png" alt="Vlog Image"
-                                            class="img-fluid mt-3" />
+                                        <img src="./assets/vlog-post-img/vlog-post-img1.png" alt="Vlog Image" class="img-fluid mt-3" />
 
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
                                             elit fermentum
@@ -235,11 +249,10 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-xl-4">
                                     <div class="card p-3 shadow-md">
                                         <h1>Australia</h1>
-                                        <img src="./assets/vlog-post-img/vloge-post-img2.png" alt="Vlog Image"
-                                            class="img-fluid mt-3" />
+                                        <img src="./assets/vlog-post-img/vloge-post-img2.png" alt="Vlog Image" class="img-fluid mt-3" />
 
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
                                             elit fermentum

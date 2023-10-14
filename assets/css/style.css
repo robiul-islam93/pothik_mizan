@@ -59,19 +59,19 @@ transition: background 0.3s ease; /* Transition effect on background change */
 
 .navbar-scrolled {
 transition: 0.5s;
-/* background: rgba(255, 255, 255, 0.884); */
-background-image: url(../../assets/img/navbar-scrolled-shape.png);
+background: rgba(255, 255, 255, 0.884);
+/* background-image: url(../../assets/img/navbar-scrolled-shape.png); */
 height: 18vh;
 background-position: bottom;
 background-repeat: no-repeat;
 background-size: cover;
-/* box-shadow: 5px 5px 10px rgba(68, 67, 67, 0.63);
-color: #ffffff; */
+box-shadow: 5px 5px 10px rgba(68, 67, 67, 0.63);
+color: #000000;
 
 }
 
 .navbar-scrolled .navbar-nav a{
-  color: #ffffff;
+  color: #080808;
 }
 
 
@@ -341,7 +341,6 @@ color: #ffffff; */
   overflow: hidden;
   z-index: 2;
   transition: 0.6s all ease;
-  
 }
 
 .video-gallery-btn a::before {
@@ -389,10 +388,9 @@ color: #ffffff; */
   font-family: var(--header-font);
 }
 
-.travel-story-hedar-section h1 {
+.travel-story-hedar-section h2 {
   font-family: var(--header-font);
-  font-size: 3.5em;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .travel-story-hedar-section p {
@@ -405,7 +403,7 @@ color: #ffffff; */
   width: 80%;
 }
 .travel-head h2 {
-  font-weight: 600;
+  font-weight: 700;
 }
 .travel-head p {
   line-height: 1.8;

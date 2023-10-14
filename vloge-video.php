@@ -34,7 +34,7 @@
 </style>
 
 <section class="tab-section">
-    <h1 class="bg-primary p-3 text-center text-white mb-4">Travel Vlog</h1>
+    <h1 class="bg-primary p-3 text-center text-white mb-4">Travel Video</h1>
     <div class="container"> <!-- Nav pills -->
         <ul class="nav nav-pills justify-content-center col-md-12" role="tablist">
             <li class="nav-item">

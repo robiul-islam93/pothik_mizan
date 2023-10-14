@@ -85,14 +85,14 @@
           </div>
         </div>
       </div>
-      <div class="back-to-top">
+      <!-- <div class="back-to-top">
         <a class="back-top-icon" href="#top" id="bt-top">
           <i
             style="background: #000; border-radius: 50%; padding: 5px 10px"
             class="fa-solid fa-arrow-up"
           ></i>
         </a>
-      </div>
+      </div> -->
     </footer>
         <!-- fotter section end -->
   </body>

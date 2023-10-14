@@ -1,8 +1,13 @@
+<style>
+  .travel-story-section{
+    padding-top: 120px;
+  }
 
+</style>
 <section class="travel-story-section">
   <!-- Travel Story Header -->
   <div class="travel-story-hedar-section text-center">
-    <h1 id="TRAVEL">Travel Video.</h1>
+    <h2>Travel Video</h2>
     <p>Explore the World!</p>
   </div>
 

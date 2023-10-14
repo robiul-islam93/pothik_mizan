@@ -49,26 +49,97 @@
      
 
       <li class="nav-item mt-3">
-        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Travel Section </h6>
+        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Travel Bloge Section </h6>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="vlog-img.php">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="fa fa-globe text-dark text-lg "></i>
+            <i class="fa fa-image text-dark text-lg "></i>
           </div>
-          <span class="nav-link-text ms-1">Vlog Img</span>
+          <span class="nav-link-text ms-1">Traveling Bloge Picture</span>
         </a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="medical-img.php">
+          <div
+            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fa fa-image text-dark text-lg "></i>
+          </div>
+          <span class="nav-link-text ms-1">Medical Picture</span>
+        </a>
+      </li>
+
 
       <li class="nav-item">
         <a class="nav-link" href="services.php">
           <div
             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fa fa-image text-dark text-lg "></i>
+          </div>
+          <span class="nav-link-text ms-1">Animation Picture</span>
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="services.php">
+          <div
+            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fa fa-image text-dark text-lg "></i>
+          </div>
+          <span class="nav-link-text ms-1">Islamic Picture</span>
+        </a>
+      </li>
+
+
+     
+
+      <li class="nav-item mt-3">
+        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Travel Bloge Video Section </h6>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="travel-blog-video.php">
+          <div
+            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="fa fa-video text-dark text-lg "></i>
           </div>
-          <span class="nav-link-text ms-1">Vloge Video</span>
+          <span class="nav-link-text ms-1">Traveling Bloge video</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="medical-video.php">
+          <div
+            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fa fa-video text-dark text-lg "></i>
+          </div>
+          <span class="nav-link-text ms-1">Medical video</span>
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="animation-video.php">
+          <div
+            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fa fa-video text-dark text-lg "></i>
+          </div>
+          <span class="nav-link-text ms-1">Animation video</span>
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="islamic-video.php">
+          <div
+            class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fa fa-video text-dark text-lg "></i>
+          </div>
+          <span class="nav-link-text ms-1">Islamic video</span>
         </a>
       </li>
 

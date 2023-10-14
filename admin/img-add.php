@@ -13,7 +13,7 @@
             </div>
             <div class="card-body">
                 <form action="img-code.php" method="POST" enctype="multipart/form-data">
-
+ 
                 <div class="mb-3">
                     <label>Name</label>
                     <input type="text" name="name" required class="form-control">

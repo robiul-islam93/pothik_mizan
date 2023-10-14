@@ -19,8 +19,8 @@ if (isset($_POST['addimg'])) {
 
         $imgfiletype = strtolower(pathinfo($image, PATHINFO_EXTENSION));
 
-        if ($imgfiletype != 'jpg' && $imgfiletype != 'jpeg' && $imgfiletype != 'png') {
-            redirect('vlog-img.php', 'Sorry Only JPG, JPEG, And PNG Imge Uplode');
+        if ($imgfiletype != 'jpg' && $imgfiletype != 'jpeg' && $imgfiletype != 'mp4' && $imgfiletype != 'png') {
+            redirect('vlog-img.php', 'Sorry Only JPG, mp4 JPEG,  And PNG Imge Uplode');
         }
 
         $path = "../assets/Upload/add-img/";
@@ -120,8 +120,6 @@ if (isset($_POST['Updateimg'])) {
             }else{
                 redirect('vlog-img-edit.php?id='.$imgid, 'Somethink Went To Wrong');
             }
-
-
 }
 
 
