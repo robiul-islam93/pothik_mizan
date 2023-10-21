@@ -50,7 +50,7 @@
 </style>
 <section id="vloge-picture">
     <div class="vloge-heading text-center">
-        <h1>Bloge Image<br><span>Explore The World!</span></h1>
+        <h1>Blog Image<br><span>Explore The World!</span></h1>
     </div>
     <div class="container">
         <div class="row align-items-center">

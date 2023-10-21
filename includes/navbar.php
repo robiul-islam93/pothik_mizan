@@ -25,10 +25,10 @@
                 <a class="nav-link" href="index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="vloge-post.php">Bloge</a>
+                <a class="nav-link" href="vloge-post.php">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="travel-video.php">Travel</a>
+                <a class="nav-link" href="vloge-video.php">Travel</a>
               </li>
             </ul>
 

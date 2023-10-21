@@ -21,6 +21,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
+                    </tbody>
                     <?php
 
                     $imgadd = getall('travel_vlog');
