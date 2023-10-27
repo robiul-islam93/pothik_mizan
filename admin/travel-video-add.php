@@ -20,14 +20,18 @@
                 </div>
 
                 <div class="mb-3">
-                    <label>Small Description</label>
-                    <textarea rows="4" name="small_description" required class="form-control"></textarea>
-                </div>
-
-                <div class="mb-3">
                     <label>Upload Video</label>
                     <input type="file" name="video"  class="form-control">
                 </div>
+<!-- 
+                
+
+                <div class="mb-3">
+                    <label>Social Link</label>
+                    <input type="text" name="link" required class="form-control">
+                </div> -->
+
+             
 
                 <div class="mb-3">
                     <label>Status (Checked-Hidden,  un-checked-visiable)</label><br>

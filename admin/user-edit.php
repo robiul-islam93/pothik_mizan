@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
-                        <label>Name</label>
+                        <label>Password</label>
                         <input type="password" required name="password" value="<?= $user ['data']['password']?>" class="form-control">
                     </div>
                 </div>

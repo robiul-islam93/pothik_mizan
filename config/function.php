@@ -36,11 +36,13 @@ function redirect($url, $status){
 
 function alertMessage(){
     if(isset($_SESSION['status'])){
-        echo '<div class ="aleart rounded py-3 p-2 alert-success">
+        echo '<div class ="aleart bg-success text-white rounded py-3 p-2 alert-success text-center mt-3" style="width: 60%; margin:auto">
         <h5>'.$_SESSION['status'].'</h5></div>';
         unset($_SESSION['status']);
     }
 }
+
+
 
 // alerts massage function end
 

@@ -3,6 +3,7 @@
 
 require '../config/function.php';
 
+include("authentication.php");
 
 ?>
 <!DOCTYPE html>
@@ -29,6 +30,7 @@ require '../config/function.php';
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
+<?= alertMessage(); ?>
 
 <?php include('sidebar.php') ?>
 
