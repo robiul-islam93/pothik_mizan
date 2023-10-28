@@ -60,42 +60,37 @@
                     <div class="car-item text-center">
                         <div class="container">
                             <div class="row">
-                            <?php
-
-                                    $limit = 1;
-                                    
-                                    $videoquery = "SELECT * FROM travel_vloge_video WHERE status = '0' ORDER BY id DESC LIMIT 1 ";
-                                    $result = mysqli_query($connection, $videoquery);
-                                    if ($result) {
-                                        if (mysqli_num_rows($result) > 0) {
-                                            foreach ($result as $row) {
-                                            
-                                    ?>
-                                <div class="col-lg-4 col-md-6 mb-4">
-                                    <div class="card p-3">
-                                    <h5>
-                                    <?= $row['name']; ?>
-                                </h5>
-                                        <video width="100%" controls>
-                                            <source
-                                                src="<?= $row['video']; ?>"
-                                                type="video/mp4">
-
-                                        </video>
-                                        <div class="card-body">
-                                            <p class="card-text"><?= $row['small_description']; ?></p>
-                                            <a href="https://www.youtube.com/@pothikmizan" class="btn btn-primary">Watch
-                                                Video</a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <?php
-        }
-    }
-}
 
-?>
-                                
+                                $limit = 1;
+
+                                $videoquery = "SELECT * FROM travel_vloge_video WHERE status = '0' ORDER BY id DESC LIMIT 1 ";
+                                $result = mysqli_query($connection, $videoquery);
+                                if ($result) {
+                                    if (mysqli_num_rows($result) > 0) {
+                                        foreach ($result as $row) {
+
+                                ?>
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="card  p-3 m-2 shadow-md">
+                                                    <video width="100%" controls>
+                                                        <source src="<?= $row['video']; ?>" type="video/mp4">
+                                                    </video>
+                                                    <h5 class="pt-2">
+                                                        <?= $row['name']; ?>
+                                                    </h5>
+                                                    <div class="card-body">
+                                                        <p class="card-text" style=" text-align: justify;"><?= $row['small_description']; ?></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                <?php
+                                        }
+                                    }
+                                }
+
+                                ?>
+
                             </div>
                         </div>
                     </div>
@@ -116,8 +111,7 @@
                                     <div class="card">
                                         <h5 class="card-title p-2">open heart surgery Vloge Video</h5>
                                         <video width="100%" controls>
-                                            <source src="./assets/medical-video/open heart surgery .mp4"
-                                                type="video/mp4">
+                                            <source src="./assets/medical-video/open heart surgery .mp4" type="video/mp4">
 
                                         </video>
                                         <div class="card-body">
@@ -128,8 +122,8 @@
                                     </div>
                                 </div>
 
-                               
-                                
+
+
                             </div>
                         </div>
                     </div>
@@ -150,8 +144,7 @@
                                     <div class="card">
                                         <h5 class="card-title p-2">animated reel Funny Dance ❤️ Video</h5>
                                         <video width="100%" controls>
-                                            <source src="./assets/animation-video/animated reel ❤️.mp4"
-                                                type="video/mp4">
+                                            <source src="./assets/animation-video/animated reel ❤️.mp4" type="video/mp4">
 
                                         </video>
                                         <div class="card-body">
@@ -178,11 +171,9 @@
                             <div class="row">
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="card">
-                                        <h5 class="card-title p-2">Abu Toha Adnan Video  Video</h5>
+                                        <h5 class="card-title p-2">Abu Toha Adnan Video Video</h5>
                                         <video width="100%" controls>
-                                            <source
-                                                src="./assets/vlog-video/Pakistan vs India _ Shaheen afridi _ Tiktok short video.mp4"
-                                                type="video/mp4">
+                                            <source src="./assets/vlog-video/Pakistan vs India _ Shaheen afridi _ Tiktok short video.mp4" type="video/mp4">
 
                                         </video>
                                         <div class="card-body">

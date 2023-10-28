@@ -15,26 +15,41 @@
   <div class="container mt-5 story-section">
     <div class="row align-items-center">
       <!-- Video -->
-      <div class="col-lg-6 travel-video">
-        <video width="100%" controls>
-          <source src="./assets/travel-video/shiddat-mugic_video.mkv">
-        </video>
-      </div>
+      <?php
 
-      <!-- Text Content -->
-      <div class="col-lg-6 travel-head">
-        <div class="travel-text">
-          <h2>Tour de Tea Garden, Sylhet</h2>
-          <p>
-            Many of us can't imagine the morning without a cup of smoking tea...
-          </p>
+$limit = 1;
 
-          <!-- Read More Button -->
-          <div class="traveling-btn">
-            <a href="vloge-video.php">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
+$imgquery = "SELECT * FROM travel_vloge_video WHERE status = '0' ORDER BY id DESC LIMIT 1 ";
+$result = mysqli_query($connection, $imgquery);
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        foreach ($result as $row) {
+
+?>
+            <div class="col-lg-6 travel-video">
+                  <video width="100%" controls>
+                 <source src="<?= $row['video']; ?>" type="video/mp4">
+                   </video>
+            </div>
+            <div class="col-lg-6 travel-head">
+                <div class="traveling-section">
+                    <h3>
+                        <?= $row['name']; ?>
+                    </h3>
+                    <p>
+                        <?= $row['small_description']; ?>
+                    </p>
+
+                    <!-- Read More Button -->
+                    <div class="traveling-btn">
+                        <a href="vloge-video.php">Read More</a>
+                    </div>
+                </div>
+            </div>
+<?php
+        }
+    }
+}
+?>
   </div>
 </section>

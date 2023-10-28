@@ -18,8 +18,8 @@ if (isset($_POST['bloge_video_add_video'])) {
 
         $videofiletype = strtolower(pathinfo($video, PATHINFO_EXTENSION));
 
-        if ($videofiletype != 'jpg' && $videofiletype != 'jpeg' && $videofiletype != 'mp4' && $videofiletype != 'png') {
-            redirect('travel-blog-video.php', 'Sorry Only JPG, mp4 JPEG,  And PNG Imge Uplode');
+        if ($videofiletype != 'jpg' && $videofiletype != 'jpeg' && $videofiletype != 'mp4' && $videofiletype != 'png' && $videofiletype != 'mkv') {
+            redirect('travel-blog-video.php', 'Sorry Only JPG, mp4, JPEG, MKV And PNG Imge Uplode');
         }
 
         $path = "../assets/Upload/travel-vloge_video/";

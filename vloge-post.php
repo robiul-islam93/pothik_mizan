@@ -155,7 +155,7 @@
                                                     <?php if ($row['image'] != '') : ?>
 
 
-                                                        <img src="<?= $row['image']; ?>" style="height: 30vh; object-fit: cover;" class="w-100 rounded" alt="Img">
+                                                        <img src="<?= $row['image']; ?>" style="height: 30vh; object-fit: cover;" class="w-100 rounded" alt=" Medical Img">
 
 
                                                     <?php else : ?>
@@ -196,30 +196,50 @@
                 <div class="vlog-picture-items">
                     <div class="vloge-item text-center">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-xl-4">
-                                    <div class="card p-3 shadow-md">
-                                        <h1>Himchori</h1>
-                                        <img src="./assets/vlog-post-img/vlog-post-img1.png" alt="Vlog Image" class="img-fluid mt-3" />
+                        <div class="row">
+                                <?php
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
-                                            elit fermentum
-                                            vestibulum. Nunc a dolor non orci auctor lacinia....</p>
-                                        <a href="#" class="btn btn-primary">See More</a>
-                                    </div>
-                                </div>
+                                $limit = 3;
 
-                                <div class="col-xl-4">
-                                    <div class="card p-3 shadow-md">
-                                        <h1>Australia</h1>
-                                        <img src="./assets/vlog-post-img/vloge-post-img2.png" alt="Vlog Image" class="img-fluid mt-3" />
+                                $imgquery = "SELECT * FROM animation_picture WHERE status = '0' ORDER BY id DESC ";
+                                $result = mysqli_query($connection, $imgquery);
+                                if ($result) {
+                                    if (mysqli_num_rows($result) > 0) {
+                                        foreach ($result as $row) {
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
-                                            elit fermentum
-                                            vestibulum. Nunc a dolor non orci auctor lacinia....</p>
-                                        <a href="#" class="btn btn-primary">See More</a>
-                                    </div>
-                                </div>
+                                ?>
+                                            <div class="col-xl-4">
+                                                <div class="card p-3 m-2 shadow-md">
+
+
+                                                    <?php if ($row['image'] != '') : ?>
+
+
+                                                        <img src="<?= $row['image']; ?>" style="height: 30vh; object-fit: cover;" class="w-100 rounded" alt="Img">
+
+
+                                                    <?php else : ?>
+                                                        <img src="assets/img/no-img.jpg" class="w-100 rounded" alt="Animation Image">
+
+
+                                                    <?php endif; ?>
+
+
+
+                                                    <h3>
+                                                        <?= $row['name']; ?>
+                                                    </h3>
+                                                    <p>
+                                                        <?= $row['small_description']; ?>
+                                                    </p>
+                                                    <!-- <a href="#" class="btn btn-primary">See More</a> -->
+                                                </div>
+                                            </div>
+                                <?php
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -236,30 +256,50 @@
                 <div class="vlog-picture-items">
                     <div class="vloge-item text-center">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-xl-4">
-                                    <div class="card p-3 shadow-md">
-                                        <h1>Himchori</h1>
-                                        <img src="./assets/vlog-post-img/vlog-post-img1.png" alt="Vlog Image" class="img-fluid mt-3" />
+                        <div class="row">
+                                <?php
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
-                                            elit fermentum
-                                            vestibulum. Nunc a dolor non orci auctor lacinia....</p>
-                                        <a href="#" class="btn btn-primary">See More</a>
-                                    </div>
-                                </div>
+                                $limit = 3;
 
-                                <div class="col-xl-4">
-                                    <div class="card p-3 shadow-md">
-                                        <h1>Australia</h1>
-                                        <img src="./assets/vlog-post-img/vloge-post-img2.png" alt="Vlog Image" class="img-fluid mt-3" />
+                                $imgquery = "SELECT * FROM islamic_picture WHERE status = '0' ORDER BY id DESC ";
+                                $result = mysqli_query($connection, $imgquery);
+                                if ($result) {
+                                    if (mysqli_num_rows($result) > 0) {
+                                        foreach ($result as $row) {
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at augue at
-                                            elit fermentum
-                                            vestibulum. Nunc a dolor non orci auctor lacinia....</p>
-                                        <a href="#" class="btn btn-primary">See More</a>
-                                    </div>
-                                </div>
+                                ?>
+                                            <div class="col-xl-4">
+                                                <div class="card p-3 m-2 shadow-md">
+
+
+                                                    <?php if ($row['image'] != '') : ?>
+
+
+                                                        <img src="<?= $row['image']; ?>" style="height: 30vh; object-fit: cover;" class="w-100 rounded" alt="Img">
+
+
+                                                    <?php else : ?>
+                                                        <img src="assets/img/no-img.jpg" class="w-100 rounded" alt="Animation Image">
+
+
+                                                    <?php endif; ?>
+
+
+
+                                                    <h3>
+                                                        <?= $row['name']; ?>
+                                                    </h3>
+                                                    <p>
+                                                        <?= $row['small_description']; ?>
+                                                    </p>
+                                                    <!-- <a href="#" class="btn btn-primary">See More</a> -->
+                                                </div>
+                                            </div>
+                                <?php
+                                        }
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>

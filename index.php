@@ -7,8 +7,6 @@ include('./includes/header.php');
 
 ?>
 
-
-
 <?php
 
 include('vloge_picture.php');
