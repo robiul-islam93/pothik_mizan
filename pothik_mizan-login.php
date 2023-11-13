@@ -44,7 +44,7 @@
     <form action="login_code.php" method="POST">
       <div class="bg-white rounded-2 p-5" style="width: 500px; margin:auto; box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.30);">
       <?= alertMessage();?>
-        <img src="assets/icon/vlog-icon-removebg-preview.png" alt="" style="width:30%; display:block; margin:auto">
+        <a href="index.php"><img src="assets/icon/vlog-icon-removebg-preview.png" alt="" style="width:30%; display:block; margin:auto"></a>
         <h3 class="text-center mb-3">Login To Your Dashbord</h3>
         <label style="font-size:20px; font-weight: 750;">Email: </label>
         <input type="gmail" name="gmail" class="form-control">

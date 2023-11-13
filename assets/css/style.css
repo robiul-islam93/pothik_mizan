@@ -59,13 +59,12 @@ transition: background 0.3s ease; /* Transition effect on background change */
 
 .navbar-scrolled {
 transition: 0.5s;
-background: rgba(255, 255, 255, 0.884);
-/* background-image: url(../../assets/img/navbar-scrolled-shape.png); */
+/* background: rgba(255, 255, 255, 0.884); */
+background-image: url(../img/nav-shape_img.png);
 height: 18vh;
 background-position: bottom;
 background-repeat: no-repeat;
 background-size: cover;
-box-shadow: 5px 5px 10px rgba(68, 67, 67, 0.63);
 color: #000000;
 
 }
@@ -109,6 +108,7 @@ color: #000000;
   transition: transform 0.4s linear;
 }
 .nav-item a:hover::before {
+  color: #fff;
   transform: scaleX(1);
   transform-origin: left;
 }

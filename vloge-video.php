@@ -12,12 +12,21 @@
         padding-top: 10rem;
     }
 
-    /* .pagination .page-item {
-        margin: 10px;
-    } */
+    .nav-itemsD a:hover {
+        background: #222 !important;
+        color: #fff !important;
+    }
 
     .car-items {
         margin-top: 10%;
+    }
+
+
+    .nav-itemsD a {
+        text-transform: capitalize;
+        background: #fff !important;
+        color: #222 !important;
+        transition: 0.5s;
     }
 
     .nav .nav-link {
@@ -34,19 +43,19 @@
 </style>
 
 <section class="tab-section">
-    <h1 class="bg-primary p-3 text-center text-white mb-4">Travel Video</h1>
+    <h1 class="bg-dark p-3 text-center text-white mb-4">Travel Video</h1>
     <div class="container"> <!-- Nav pills -->
         <ul class="nav nav-pills justify-content-center col-md-12" role="tablist">
-            <li class="nav-item">
+            <li class="nav-item nav-itemsD">
                 <a class="nav-link  active" data-bs-toggle="pill" href="#Travel">Travel Vloge Video</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-itemsD">
                 <a class="nav-link" data-bs-toggle="pill" href="#Medical">Medical Video</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-itemsD">
                 <a class="nav-link" data-bs-toggle="pill" href="#Animation">Animation Video</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-itemsD">
                 <a class="nav-link" data-bs-toggle="pill" href="#Islamic">Islamic Video</a>
             </li>
         </ul>
@@ -55,7 +64,7 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div id="Travel" class="container tab-pane active">
+            <div id="Travel" class="container tab-pane  active">
                 <div class="car-items">
                     <div class="car-item text-center">
                         <div class="container">
@@ -64,13 +73,13 @@
 
                                 $limit = 1;
 
-                                $videoquery = "SELECT * FROM travel_vloge_video WHERE status = '0' ORDER BY id DESC LIMIT 1 ";
+                                $videoquery = "SELECT * FROM travel_vloge_video WHERE status = '0' ORDER BY id DESC  ";
                                 $result = mysqli_query($connection, $videoquery);
                                 if ($result) {
                                     if (mysqli_num_rows($result) > 0) {
                                         foreach ($result as $row) {
 
-                                ?>
+                                            ?>
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="card  p-3 m-2 shadow-md">
                                                     <video width="100%" controls>
@@ -80,11 +89,13 @@
                                                         <?= $row['name']; ?>
                                                     </h5>
                                                     <div class="card-body">
-                                                        <p class="card-text" style=" text-align: justify;"><?= $row['small_description']; ?></p>
+                                                        <p class="card-text" style=" text-align: justify;">
+                                                            <?= $row['small_description']; ?>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                <?php
+                                            <?php
                                         }
                                     }
                                 }
@@ -107,22 +118,38 @@
                     <div class="car-item text-center">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 mb-4">
-                                    <div class="card">
-                                        <h5 class="card-title p-2">open heart surgery Vloge Video</h5>
-                                        <video width="100%" controls>
-                                            <source src="./assets/medical-video/open heart surgery .mp4" type="video/mp4">
+                                <?php
 
-                                        </video>
-                                        <div class="card-body">
-                                            <p class="card-text">Description of the video goes here.</p>
-                                            <a href="https://www.youtube.com/@pothikmizan" class="btn btn-primary">Watch
-                                                Video</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                $limit = 1;
 
+                                $videoquery = "SELECT * FROM medical_video WHERE status = '0' ORDER BY id DESC  ";
+                                $result = mysqli_query($connection, $videoquery);
+                                if ($result) {
+                                    if (mysqli_num_rows($result) > 0) {
+                                        foreach ($result as $row) {
 
+                                            ?>
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="card  p-3 m-2 shadow-md">
+                                                    <video width="100%" controls>
+                                                        <source src="<?= $row['video']; ?>" type="video/mp4">
+                                                    </video>
+                                                    <h5 class="pt-2">
+                                                        <?= $row['name']; ?>
+                                                    </h5>
+                                                    <div class="card-body">
+                                                        <p class="card-text" style=" text-align: justify;">
+                                                            <?= $row['small_description']; ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                    }
+                                }
+
+                                ?>
 
                             </div>
                         </div>
@@ -144,7 +171,8 @@
                                     <div class="card">
                                         <h5 class="card-title p-2">animated reel Funny Dance ❤️ Video</h5>
                                         <video width="100%" controls>
-                                            <source src="./assets/animation-video/animated reel ❤️.mp4" type="video/mp4">
+                                            <source src="./assets/animation-video/animated reel ❤️.mp4"
+                                                type="video/mp4">
 
                                         </video>
                                         <div class="card-body">
@@ -173,7 +201,9 @@
                                     <div class="card">
                                         <h5 class="card-title p-2">Abu Toha Adnan Video Video</h5>
                                         <video width="100%" controls>
-                                            <source src="./assets/vlog-video/Pakistan vs India _ Shaheen afridi _ Tiktok short video.mp4" type="video/mp4">
+                                            <source
+                                                src="./assets/vlog-video/Pakistan vs India _ Shaheen afridi _ Tiktok short video.mp4"
+                                                type="video/mp4">
 
                                         </video>
                                         <div class="card-body">

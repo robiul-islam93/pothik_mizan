@@ -53,7 +53,7 @@
                                     <td>
                                         <a href="travel-blog-video-edit.php?id= <?= $videoitem['id'];?>" class="btn btn-success btn-sm">Edit</a>
 
-                                        <a href="travel-blog-video-delete.php?id= <?= $videoitem['id']?>" class="btn btn-danger btn-sm"  onclick="DeleteAlert()">Delete</a>
+                                        <a href="travel-blog-video-delete.php?id= <?= $videoitem['id'];?>" class="btn btn-danger btn-sm"  onclick="DeleteAlert()">Delete</a>
                                     </td>
                                 </tr>
                                 <?php
