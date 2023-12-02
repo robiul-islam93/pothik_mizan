@@ -48,6 +48,11 @@
     />
     <!-- boxicons css link -->
 
+    <!-- js link start -->
+    <script src="assets/js/script.js"></script>
+    <!-- js link end -->
+
+
     <title>Pothik mizan</title>
   </head>
   <body style="background: #007bff28;">

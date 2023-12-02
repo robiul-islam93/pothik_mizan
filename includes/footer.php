@@ -95,5 +95,13 @@
       </div> -->
     </footer>
         <!-- fotter section end -->
+        <!-- back-to-top button start -->
+        <a href="#top_bar"  class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+        <!-- back-to-top button end -->
+
+        
+    <!-- js link start -->
+    <script src="assets/js/script.js"></script>
+    <!-- js link end -->
   </body>
 </html>

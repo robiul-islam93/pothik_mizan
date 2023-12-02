@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                    Image
+                    Animation Image
                     <a href="animation_img-add.php" class="btn btn-primary float-end">Add Animation Img</a>
                 </h4>
             </div>

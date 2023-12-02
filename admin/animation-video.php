@@ -6,8 +6,8 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                    Medical Image List
-                    <a href="medical-img-add.php" class="btn btn-primary float-end">Add Img</a>
+                   Animation Video List
+                    <a href="animation-video-add.php" class="btn btn-primary float-end">Add Animation Video</a>
                 </h4>
             </div>
             <div class="card-body">
@@ -21,27 +21,28 @@
                             <th>Action</th>
                         </tr>
                     </thead>
+                    </tbody>
                     <?php
 
-                    $imgadd = getall('medical_picture');
-                    if ($imgadd) {
-                        if (mysqli_num_rows($imgadd) > 0) {
-                            foreach ($imgadd as $imgitem) {
+                    $videoadd = getall('Animation_video');
+                    if ($videoadd) {
+                        if (mysqli_num_rows($videoadd) > 0) {
+                            foreach ($videoadd as $videoitem) {
                                 ?>
 
                                 <tr>
                                     <td>
-                                        <?= $imgitem['id']; ?>
+                                        <?= $videoitem['id']; ?>
                                     </td>
 
                                     <td>
-                                        <?= $imgitem['name']; ?>
+                                        <?= $videoitem['name']; ?>
                                     </td>
 
                                     <td>
                                         <?php
 
-                                        if ($imgitem['status'] == 1) {
+                                        if ($videoitem['status'] == 1) {
                                             echo '<span class="badge bg-danger text-white"> Hidden </span>';
                                         } else {
                                             echo '<span class="badge bg-success text-center"> Visiable </span>';
@@ -50,19 +51,18 @@
                                         ?>
                                     </td>
                                     <td>
-                                        <a href="medical-img-edit.php?id= <?= $imgitem['id'];?>" class="btn btn-success btn-sm">Edit</a>
+                                        <a href="animation-video-edit.php?id= <?= $videoitem['id'];?>" class="btn btn-success btn-sm">Edit</a>
 
-                                        <a href="medical-img-delete.php?id= <?= $imgitem['id']?>" class="btn btn-danger btn-sm"  onclick="DeleteAlert()">Delete</a>
+                                        <a href="animation-video-delete.php?id=<?= $videoitem['id'];?>" class="btn btn-danger btn-sm"  onclick="DeleteAlert()">Delete</a>
                                     </td>
                                 </tr>
-                                <?php
+             <?php
+
+                                    }
+                                }
                             }
-                        }
-                    }
-
-
-                    ?>
-
+             
+             ?>
                     </tbody>
                 </table>
             </div>
@@ -73,7 +73,7 @@
 
 
 <script>
-    function DeleteAlert(){
+    function DeleteAlert() {
         let result = confirm("Are You Sure You Went To Data");
         document.write(result);
     }

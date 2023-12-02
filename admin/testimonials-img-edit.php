@@ -5,16 +5,16 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                Update Img
+               Testimonials Img Update
 
-                <a href="animation_img.php" class="btn btn-danger float-end ">Back</a>
+                <a href="testimonial-img.php" class="btn btn-danger float-end ">Back</a>
 
                 </h4>
             </div>
             <div class="card-body">
                 <?= alertMessage() ?>
 
-                <form action="animation_img-code.php" method="POST" enctype="multipart/form-data">
+                <form action="testimonials-img-code.php" method="POST" enctype="multipart/form-data">
 
                 <?php
                 // url id get this function start
@@ -29,7 +29,7 @@
 
                 // database table and url id get this function  start
 
-               $imageupdate = getById('animation_picture', $imgupdate);
+               $imageupdate = getById('testimonial_picture', $imgupdate);
 
                if($imageupdate['status']){
                 if($imageupdate['status']==200){
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="mb-2 text-end">
-                    <button type="submit" name="animation_Update_img" class="btn btn-primary" >Update Image</button>
+                    <button type="submit" name="testimonials_Update_img" class="btn btn-primary" >Update Image</button>
                 </div>
 
                 </form>

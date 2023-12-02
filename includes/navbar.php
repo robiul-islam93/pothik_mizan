@@ -6,7 +6,7 @@
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#"
-            ><img src="assets/icon/vlog-icon-removebg-preview.png" alt=""
+            ><img src="assets/icon/Pothik_mizan.png" alt=""
           /></a>
           <button
             class="navbar-toggler"
@@ -22,7 +22,7 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
+                <a class="nav-link" id="top_bar" href="index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="vloge-post.php">Blog</a>
@@ -33,12 +33,12 @@
             </ul>
 
             <a class="logo1" href="#"
-              ><img src="assets/icon/vlog-icon-removebg-preview.png" alt="" />
+              ><img src="assets/icon/Pothik_mizan.png" alt="" />
             </a>
-
+   
             <ul class="navbar-nav">
             <li class="nav-item">
-                <a  class="nav-link" href="">Testimonial</a>
+                <a  class="nav-link" href="#">Testimonial</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#instragram">About Us</a>

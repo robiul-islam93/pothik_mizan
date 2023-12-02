@@ -6,8 +6,8 @@
         <div class="card">
             <div class="card-header">
                 <h4>
-                    Medical Image List
-                    <a href="medical-img-add.php" class="btn btn-primary float-end">Add Img</a>
+                    Testimonials Image List
+                    <a href="testimonials_img-add.php" class="btn btn-primary float-end">Add testimonials Img</a>
                 </h4>
             </div>
             <div class="card-body">
@@ -23,7 +23,7 @@
                     </thead>
                     <?php
 
-                    $imgadd = getall('medical_picture');
+                    $imgadd = getall('testimonial_picture');
                     if ($imgadd) {
                         if (mysqli_num_rows($imgadd) > 0) {
                             foreach ($imgadd as $imgitem) {
@@ -50,9 +50,9 @@
                                         ?>
                                     </td>
                                     <td>
-                                        <a href="medical-img-edit.php?id= <?= $imgitem['id'];?>" class="btn btn-success btn-sm">Edit</a>
+                                        <a href="testimonials-img-edit.php?id= <?= $imgitem['id'];?>" class="btn btn-success btn-sm">Edit</a>
 
-                                        <a href="medical-img-delete.php?id= <?= $imgitem['id']?>" class="btn btn-danger btn-sm"  onclick="DeleteAlert()">Delete</a>
+                                        <a href="testimonials-img-delete.php?id= <?= $imgitem['id']?>" class="btn btn-danger btn-sm"  onclick="DeleteAlert()">Delete</a>
                                     </td>
                                 </tr>
                                 <?php

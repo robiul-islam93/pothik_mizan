@@ -911,4 +911,26 @@ color: #000000;
   }
 }
 
+.scrollup {
+	width:35px;
+	height:35px;
+	position:fixed;
+	bottom:30px;
+	right:15px;
+	display:none;
+	background:rgba(25, 164, 168, 0.8);
+	text-align: center;
+}
+
+.scrollup i {
+	color:#000000;
+	font-size:15px;
+	display:block;
+	line-height:33px;
+}
+
+.scrollup:hover {
+	background:rgba(63, 184, 193, 0.9);
+}
+
 /* Footer End */

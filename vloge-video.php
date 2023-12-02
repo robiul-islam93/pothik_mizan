@@ -119,9 +119,6 @@
                         <div class="container">
                             <div class="row">
                                 <?php
-
-                                $limit = 1;
-
                                 $videoquery = "SELECT * FROM medical_video WHERE status = '0' ORDER BY id DESC  ";
                                 $result = mysqli_query($connection, $videoquery);
                                 if ($result) {
@@ -166,22 +163,37 @@
                 <div class="car-items">
                     <div class="car-item text-center">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 mb-4">
-                                    <div class="card">
-                                        <h5 class="card-title p-2">animated reel Funny Dance ❤️ Video</h5>
-                                        <video width="100%" controls>
-                                            <source src="./assets/animation-video/animated reel ❤️.mp4"
-                                                type="video/mp4">
+                        <div class="row">
+                                <?php
+                                $videoquery = "SELECT * FROM animation_video WHERE status = '0' ORDER BY id DESC  ";
+                                $result = mysqli_query($connection, $videoquery);
+                                if ($result) {
+                                    if (mysqli_num_rows($result) > 0) {
+                                        foreach ($result as $row) {
 
-                                        </video>
-                                        <div class="card-body">
-                                            <p class="card-text">Description of the video goes here.</p>
-                                            <a href="https://www.youtube.com/@pothikmizan" class="btn btn-primary">Watch
-                                                Video</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                            ?>
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="card  p-3 m-2 shadow-md">
+                                                    <video width="100%" controls>
+                                                        <source src="<?= $row['video']; ?>" type="video/mp4">
+                                                    </video>
+                                                    <h5 class="pt-2">
+                                                        <?= $row['name']; ?>
+                                                    </h5>
+                                                    <div class="card-body">
+                                                        <p class="card-text" style=" text-align: justify;">
+                                                            <?= $row['small_description']; ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                    }
+                                }
+
+                                ?>
+
                             </div>
                         </div>
                     </div>
@@ -196,23 +208,37 @@
                 <div class="car-items">
                     <div class="car-item text-center">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 mb-4">
-                                    <div class="card">
-                                        <h5 class="card-title p-2">Abu Toha Adnan Video Video</h5>
-                                        <video width="100%" controls>
-                                            <source
-                                                src="./assets/vlog-video/Pakistan vs India _ Shaheen afridi _ Tiktok short video.mp4"
-                                                type="video/mp4">
+                        <div class="row">
+                                <?php
+                                $videoquery = "SELECT * FROM islamic_video WHERE status = '0' ORDER BY id DESC  ";
+                                $result = mysqli_query($connection, $videoquery);
+                                if ($result) {
+                                    if (mysqli_num_rows($result) > 0) {
+                                        foreach ($result as $row) {
 
-                                        </video>
-                                        <div class="card-body">
-                                            <p class="card-text">Description of the video goes here.</p>
-                                            <a href="https://www.youtube.com/@pothikmizan" class="btn btn-primary">Watch
-                                                Video</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                            ?>
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="card  p-3 m-2 shadow-md">
+                                                    <video width="100%" controls>
+                                                        <source src="<?= $row['video']; ?>" type="video/mp4">
+                                                    </video>
+                                                    <h5 class="pt-2">
+                                                        <?= $row['name']; ?>
+                                                    </h5>
+                                                    <div class="card-body">
+                                                        <p class="card-text" style=" text-align: justify;">
+                                                            <?= $row['small_description']; ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                    }
+                                }
+
+                                ?>
+
                             </div>
                         </div>
                     </div>

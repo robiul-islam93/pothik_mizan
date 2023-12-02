@@ -85,8 +85,6 @@ if (isset($_POST['Updateimg'])) {
         if(file_exists($deleteimg)){
             unlink($deleteimg);
         }
-
-
         $imgExt = pathinfo($image, PATHINFO_EXTENSION);
         $filename = time().'.'.$imgExt;
         $finalImage = 'assets/Upload/add-img/'.$filename;
