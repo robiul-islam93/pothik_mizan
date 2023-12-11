@@ -12,22 +12,23 @@
         padding-top: 10rem;
     }
 
-    .nav-itemsD a:hover {
-        background: #222 !important;
-        color: #fff !important;
-    }
+    .nav .nav-item .nav-link {
+    text-transform: capitalize;
+    color: #222 !important;
+    font-size: 15px;
+}
 
-    .car-items {
+    .nav-pills .nav-link.active {
+    color: white !important;
+    background-color: rgb(14, 13, 13) !important; 
+}
+
+
+    /* .car-items {
         margin-top: 10%;
-    }
+    } */
 
 
-    .nav-itemsD a {
-        text-transform: capitalize;
-        background: #fff !important;
-        color: #222 !important;
-        transition: 0.5s;
-    }
 
     .nav .nav-link {
         /* color: var(--black-color); */
@@ -215,7 +216,6 @@
                                 if ($result) {
                                     if (mysqli_num_rows($result) > 0) {
                                         foreach ($result as $row) {
-
                                             ?>
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="card  p-3 m-2 shadow-md">

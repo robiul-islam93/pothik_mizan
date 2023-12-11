@@ -38,7 +38,7 @@
    
             <ul class="navbar-nav">
             <li class="nav-item">
-                <a  class="nav-link" href="#">Testimonial</a>
+                <a  class="nav-link" href="testimonial.php">Testimonial</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#instragram">About Us</a>
@@ -121,7 +121,7 @@
 
   <!-- Activate the carousel section start -->
 
-<script>
+  <script>
 $(document).ready(function () {
   // Activate the carousel
   $('#carouselExampleFade').carousel();

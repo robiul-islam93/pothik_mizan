@@ -1,8 +1,4 @@
 
-<?php include('./includes/header.php');
-?>
-
-
 <!-- Testimonial section start -->
 <section id="testimonial">
   <div class="container">
@@ -56,6 +52,3 @@
   </div>
 </section>
 <!-- Testimonial section end -->
-
-
-<?php include('./includes/footer.php'); ?>

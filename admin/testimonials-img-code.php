@@ -20,12 +20,12 @@ if ($_FILES['image']['size'] > 0) {
         redirect('testimonial-img.php', 'Sorry Only JPG, JPEG, And PNG Imge Uplode');
     }
 
-    $path = "../assets/Upload/medical-img/";
+    $path = "../assets/Upload/Testimonial-img/";
 
     $imgExt = pathinfo($image, PATHINFO_EXTENSION);
     $filename = time() . '.' . $imgExt;
 
-    $fileimage = 'assets/Upload/medical-img/' . $filename;
+    $fileimage = 'assets/Upload/Testimonial-img/' . $filename;
 } else {
     $fileimage = NULL;
 }
@@ -73,7 +73,7 @@ if (isset($_POST['testimonials_Update_img'])) {
             redirect('testimonial-img.php','Sorry Only JPG JPEG And PNG Image Upload');
         }
 
-        $path = "../assets/Upload/medical-img/";
+        $path = "../assets/Upload/Testimonial-img/";
 
         $deleteimg = "../" .$imageupdate['data']['image'];
         if(file_exists($deleteimg)){
@@ -83,7 +83,7 @@ if (isset($_POST['testimonials_Update_img'])) {
 
         $imgExt = pathinfo($image, PATHINFO_EXTENSION);
         $filename = time().'.'.$imgExt;
-        $finalImage = 'assets/Upload/medical-img/'.$filename;
+        $finalImage = 'assets/Upload/Testimonial-img/'.$filename;
 
     }else{
         $finalImage = $imageupdate['data']['image'];

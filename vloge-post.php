@@ -1,4 +1,5 @@
-<?php include('./includes/header.php'); ?>
+<?php include('./includes/header.php');
+?>
 
 <style>
     .tab-section {
@@ -9,25 +10,23 @@
         padding-top: 10rem;
     }
 
-    /* .pagination .page-item {
-        margin: 10px;
-    } */
-
-    .car-items {
-        margin-top: 10%;
-    }
-
-    .nav-itemsD a {
+    .nav .nav-item {
         text-transform: capitalize;
-        background: #fff !important;
         color: #222 !important;
         transition: 0.5s;
-    }
+}
 
-    .nav-itemsD a:hover {
-        background: #222 !important;
-        color: #fff !important;
-    }
+.nav .nav-item .nav-link {
+    text-transform: capitalize;
+    color: #222 !important;
+    font-size: 15px;
+}
+
+    .nav-pills .nav-link.active {
+    color: white !important;
+    background-color: rgb(14, 13, 13) !important; 
+}
+
 
     .nav .nav-link {
         /* color: var(--black-color); */
@@ -53,16 +52,16 @@
     <h1 class="bg-primary p-3 text-center text-white mb-4">TRAVEL BLOG PICTURE </h1>
     <div class="container"> <!-- Nav pills -->
         <ul class="nav nav-pills justify-content-center col-md-12" role="tablist">
-            <li class="nav-item  nav-itemsD">
+            <li class="nav-item">
                 <a class="nav-link active" data-bs-toggle="pill" href="#Travel">Traveling Vloge Picture</a>
             </li>
-            <li class="nav-item  nav-itemsD">
+            <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="pill" href="#Medical">Medical Picture</a>
             </li>
-            <li class="nav-item  nav-itemsD">
+            <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="pill" href="#Animation">Animation Picture</a>
             </li>
-            <li class="nav-item  nav-itemsD">
+            <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="pill" href="#Islamic">Islamic Picture</a>
             </li>
         </ul>
@@ -79,7 +78,6 @@
                         <div class="container">
                             <div class="row">
                                 <?php
-
                                 $limit = 3;
 
                                 $imgquery = "SELECT * FROM travel_vlog WHERE status = '0' ORDER BY id DESC ";

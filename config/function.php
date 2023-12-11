@@ -18,6 +18,8 @@ function validate($inputDate){
     return trim($validateDate);
 }
 
+
+
 // user security connection end
 
 

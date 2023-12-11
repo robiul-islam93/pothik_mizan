@@ -23,7 +23,7 @@ include('travel.php');
 
 <?php
 
-include('testimonial.php');
+include('Testimonials.php');
 
 ?>
 
